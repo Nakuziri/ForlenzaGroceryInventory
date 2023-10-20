@@ -4,15 +4,18 @@ inventory = {}
 # Function to add items to the inventory.
 def add_item():
     name = input("Enter the item name: ")
-    quantity = int(input("Enter the quantity: ")
-    
+    try:
+        quantity = int(input("Enter the quantity: "))
+    except:
+        print("invalid value")
     # Check if the item is already in the inventory and update its quantity.
-    if name in inventory:
-        inventory[name] += quantity
-    else:
+        if name in inventory:
+            inventory[name] += quantity
+        else:
         # If the item is not in the inventory, add it with the specified quantity.
-        inventory[name] = quantity
-
+            inventory[name] == quantity
+            
+   
 # Function to remove items from the inventory.
 def remove_item():
     name = input("Enter the item name to remove: ")
